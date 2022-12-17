@@ -23,7 +23,9 @@ Or we can string everything together by calling `tea` in front of each command:
 
 [source, bash]
 ----
-tea version.py | tea jq -r '.Version' | tea cargo run --manifest-path string-parsing/Cargo.toml 2>/dev/null
+tea version.py | 
+tea jq -r '.Version' | 
+tea cargo run --manifest-path string-parsing/Cargo.toml 2>/dev/null
 ----
 
 
