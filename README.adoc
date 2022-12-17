@@ -1,0 +1,41 @@
+[source, bash]
+----
+ls -alh ~/.tea/tea.xyz/var/pantry
+----
+
+[source, bash]
+----
+tea +python.org +rust-lang.org +stedolan.github.io
+----
+
+[source, bash]
+----
+python version.py | jq '.Version'
+----
+
+[source, bash]
+----
+tea +rust.org cargo install evcxr_repl
+----
+
+
+[source, bash]
+----
+tea -X pip install -r requirements.txt 2>&1 1>/dev/null &&
+tea -X rustc split.rs &&
+tea version.py |
+tea -X jq -r '.Version' | 
+tea ./split
+----
+
+[source, bash]
+----
+tea -X rustc split.rs
+----
+
+[source, bash]
+----
+tea version.py |
+tea -X jq -r '.Version' | 
+tea ./split
+----
