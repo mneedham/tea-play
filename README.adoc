@@ -1,6 +1,6 @@
 = tea.xyx Playground
 
-This is a repository of little experiments that I'm doing while learning about tea.xyz
+This is a repository of little experiments that I'm doing while learning about https://github.com/teaxyz/cli
 
 [source, bash]
 ----
