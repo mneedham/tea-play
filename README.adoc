@@ -3,15 +3,25 @@
 ls -alh ~/.tea/tea.xyz/var/pantry
 ----
 
+Create a tea sandbox
+
 [source, bash]
 ----
-tea +python.org +rust-lang.org +stedolan.github.io
+tea +python.org +rust-lang.org +stedolan.github.io/jq
 ----
 
 [source, bash]
 ----
-python version.py | jq '.Version'
+python version.py | jq -r '.Version' | cargo run --manifest-path string-parsing/Cargo.toml 2>/dev/null
 ----
+
+Or we can string everything together by calling `tea` in front of each command:
+
+[source, bash]
+----
+tea version.py | tea jq -r '.Version' | tea cargo run --manifest-path string-parsing/Cargo.toml 2>/dev/null
+----
+
 
 [source, bash]
 ----

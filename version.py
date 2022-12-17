@@ -3,7 +3,7 @@
 """
 ---
 dependencies:
-  python.org: 3.10.8
+  python.org: 3.11.1
 ---
 """
 
